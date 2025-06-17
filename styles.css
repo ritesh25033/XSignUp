@@ -126,11 +126,10 @@ body {
     outline: none;
     border-color: #242742;
 }
-
 #email.error {
-    border-color: rgb(255, 99, 71);
-    color: rgb(255, 99, 71);
-    background-color: rgba(255, 99, 71, 0.6);
+    border-color: rgb(255, 99, 71) !important;
+    color: rgb(255, 99, 71) !important;
+    background-color: rgba(255, 99, 71, 0.6) !important;
 }
 
 .error-message {
@@ -138,8 +137,13 @@ body {
     font-size: 12px;
     font-style: italic;
     margin-top: 5px;
+    display: none; /* Hidden by default */
+}
+
+.error-message.show {
     display: block;
 }
+
 
 .sub-btn {
     width: 100%;
