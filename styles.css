@@ -117,12 +117,12 @@ body {
 #email {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid #d6d9e6;
+    border: 1px solid rgb(255, 99, 71);
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
-    color: #242742;
-    background-color: white;
+    color: rgb(255, 99, 71);
+    background-color: rgba(255, 99, 71, 0.6);
 }
 
 /* Focus state - lower specificity than error state */
