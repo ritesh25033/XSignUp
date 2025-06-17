@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //         emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
     //         emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
     //     }, 10);
-    // }
+    }
 
     // Hide error state
     function hideError() {
