@@ -113,42 +113,37 @@ body {
     margin-bottom: 8px;
 }
 
-/* Default email input styles */
+/* Default input styles */
 #email {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid rgb(255, 99, 71);
+    border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
-    color: rgb(255, 99, 71);
-    background-color: rgba(255, 99, 71, 0.6);
 }
 
-/* Focus state - lower specificity than error state */
+/* Focus state */
 #email:focus {
     outline: none;
     border-color: #242742;
 }
 
-/* Error state - HIGHEST SPECIFICITY */
-input[type="email"]#email.error,
-input#email.error,
+/* Error state */
 #email.error {
-    border-color: rgb(255, 99, 71) !important;
-    color: rgb(255, 99, 71) !important;
-    background-color: rgba(255, 99, 71, 0.6) !important;
+    border-color: rgb(255, 99, 71);
+    color: rgb(255, 99, 71);
+    background-color: rgba(255, 99, 71, 0.6);
 }
 
-/* Override focus state when error is present */
-input[type="email"]#email.error:focus,
-input#email.error:focus,
+/* Ensure error state persists even on focus */
 #email.error:focus {
-    border-color: rgb(255, 99, 71) !important;
-    color: rgb(255, 99, 71) !important;
-    background-color: rgba(255, 99, 71, 0.6) !important;
+    border-color: rgb(255, 99, 71);
+    color: rgb(255, 99, 71);
+    background-color: rgba(255, 99, 71, 0.6);
 }
 
+/* Error message */
 .error-message {
     color: rgb(255, 99, 71);
     font-size: 12px;
@@ -160,6 +155,7 @@ input#email.error:focus,
 .error-message.show {
     display: block;
 }
+
 
 .sub-btn {
     width: 100%;
