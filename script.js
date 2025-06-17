@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('newsletter-form');
-    const emailInput = document.getElementById('email');
+    const emailInput = document.getElementById('email-error');
     const errorMessage = document.querySelector('.error-message');
 
     // Email validation function
