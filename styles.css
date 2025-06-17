@@ -120,13 +120,17 @@ body {
     border-radius: 8px;
     font-size: 16px;
     transition: all 0.3s ease;
+    color: #242742;
+    background-color: white;
 }
 
 #email:focus {
     outline: none;
     border-color: #242742;
 }
-#email.error {
+
+/* Critical: Error styling with maximum specificity */
+input#email.error {
     border-color: rgb(255, 99, 71) !important;
     color: rgb(255, 99, 71) !important;
     background-color: rgba(255, 99, 71, 0.6) !important;
@@ -137,13 +141,12 @@ body {
     font-size: 12px;
     font-style: italic;
     margin-top: 5px;
-    display: none; /* Hidden by default */
+    display: none;
 }
 
 .error-message.show {
     display: block;
 }
-
 
 .sub-btn {
     width: 100%;
