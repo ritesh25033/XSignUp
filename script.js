@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
         errorMessage.textContent = 'Valid email required.';
         
         // Force apply error styles via JavaScript as backup
-        setTimeout(() => {
-            emailInput.style.setProperty('border-color', 'rgb(255, 99, 71)', 'important');
-            emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
-            emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
-        }, 10);
-    }
+    //     setTimeout(() => {
+    //         emailInput.style.setProperty('border-color', 'rgb(255, 99, 71)', 'important');
+    //         emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
+    //         emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
+    //     }, 10);
+    // }
 
     // Hide error state
     function hideError() {
