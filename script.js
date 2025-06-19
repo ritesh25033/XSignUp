@@ -9,12 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
         return emailRegex.test(email);
     }
 
-    // Show error state
+    // Show error state - CRITICAL: Ensure immediate application
     function showError() {
+        // Add error class first
         emailInput.classList.add('error');
-        errorMessage.classList.add('show');
+        
+        // Show error message
         errorMessage.style.display = 'block';
+        errorMessage.classList.add('show');
         errorMessage.textContent = 'Valid email required.';
+        
+        // Force reflow to ensure styles are applied immediately
+        emailInput.offsetHeight;
     }
 
     // Hide error state
@@ -54,16 +60,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Focus and blur effects - only apply if not in error state
+    // Remove any focus/blur handlers that might interfere with error state
     emailInput.addEventListener('focus', function () {
+        // Only apply focus styles if not in error state
         if (!emailInput.classList.contains('error')) {
-            emailInput.style.borderColor = '#242742';
+            this.style.borderColor = '#242742';
         }
     });
 
     emailInput.addEventListener('blur', function () {
+        // Only apply blur styles if not in error state
         if (!emailInput.classList.contains('error')) {
-            emailInput.style.borderColor = '#d6d9e6';
+            this.style.borderColor = '#d6d9e6';
         }
     });
 });

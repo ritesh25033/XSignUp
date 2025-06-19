@@ -113,13 +113,15 @@ body {
     margin-bottom: 8px;
 }
 
-/* Default input styles */
+/* Default input styles - CRITICAL: Set proper default border */
 #email {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #d6d9e6;
     border-radius: 8px;
     font-size: 16px;
+    color: #242742;
+    background-color: white;
     transition: all 0.3s ease;
 }
 
@@ -129,15 +131,11 @@ body {
     border-color: #242742;
 }
 
-/* Error state - Higher specificity */
-#email.error {
-    border-color: rgb(255, 99, 71) !important;
-    color: rgb(255, 99, 71) !important;
-    background-color: rgba(255, 99, 71, 0.6) !important;
-}
-
-/* Ensure error state persists even on focus */
-#email.error:focus {
+/* Error state - CRITICAL: Must override all other states */
+#email.error,
+#email.error:focus,
+#email.error:hover,
+#email.error:active {
     border-color: rgb(255, 99, 71) !important;
     color: rgb(255, 99, 71) !important;
     background-color: rgba(255, 99, 71, 0.6) !important;
