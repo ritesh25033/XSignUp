@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thanks for subscribing!</title>
+    <title>Newsletter Signup - Success</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,12 +11,26 @@
     <div class="main">
         <div class="success-container">
             <div class="success-icon">
-                <img src="./assets/icon-success.svg" alt="Success icon">
+                <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                            <stop offset="0%" stop-color="#FF6A3A"/>
+                            <stop offset="100%" stop-color="#FF527B"/>
+                        </linearGradient>
+                    </defs>
+                    <g fill="none">
+                        <circle cx="32" cy="32" r="32" fill="url(#a)"/>
+                        <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285"/>
+                    </g>
+                </svg>
             </div>
             
             <h1 class="thanks-for-sub">Thanks for subscribing!</h1>
             
-            <p class="success-text">A confirmation email has been sent to <strong id="user-email"></strong>. Please open it and click the button inside to confirm your subscription.</p>
+            <p class="success-text">
+                A confirmation email has been sent to <strong id="user-email"></strong>. 
+                Please open it and click the button inside to confirm your subscription.
+            </p>
             
             <button class="dismiss-btn">Dismiss message</button>
         </div>
@@ -26,6 +40,21 @@
         </div>
     </div>
 
-    <script src="success.js"></script>
+    <script>
+        // Display the user's email on success page
+        document.addEventListener('DOMContentLoaded', function() {
+            const userEmail = localStorage.getItem('userEmail');
+            if (userEmail) {
+                document.getElementById('user-email').textContent = userEmail;
+                document.querySelector('.success-text').innerHTML = `A confirmation email has been sent to <strong>${userEmail}</strong>. Please open it and click the button inside to confirm your subscription.`;
+            }
+            
+            // Handle dismiss button
+            document.querySelector('.dismiss-btn').addEventListener('click', function() {
+                localStorage.removeItem('userEmail');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
 </body>
 </html>
