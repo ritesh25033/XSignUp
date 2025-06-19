@@ -11,23 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Show error state
     function showError() {
-        // Force remove any conflicting styles first
-        emailInput.style.removeProperty('border-color');
-        emailInput.style.removeProperty('color');
-        emailInput.style.removeProperty('background-color');
-        
-        // Add error class
         emailInput.classList.add('error');
         errorMessage.classList.add('show');
         errorMessage.style.display = 'block';
         errorMessage.textContent = 'Valid email required.';
-        
-        // Force apply error styles via JavaScript as backup
-        setTimeout(() => {
-            emailInput.style.setProperty('border-color', 'rgb(255, 99, 71)', 'important');
-            emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
-            emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
-        }, 10);
     }
 
     // Hide error state
@@ -35,11 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         emailInput.classList.remove('error');
         errorMessage.classList.remove('show');
         errorMessage.style.display = 'none';
-        
-        // Reset inline styles
-        emailInput.style.removeProperty('border-color');
-        emailInput.style.removeProperty('color');
-        emailInput.style.removeProperty('background-color');
     }
 
     // Form submission handler
