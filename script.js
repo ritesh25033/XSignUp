@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('newsletter-form');
-    const emailInput = document.getElementById('email-error');
+    const emailInput = document.getElementById('email');
     const errorMessage = document.querySelector('.error-message');
 
     // Email validation function
@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
         errorMessage.textContent = 'Valid email required.';
         
         // Force apply error styles via JavaScript as backup
-    //     setTimeout(() => {
-    //         emailInput.style.setProperty('border-color', 'rgb(255, 99, 71)', 'important');
-    //         emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
-    //         emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
-    //     }, 10);
+        setTimeout(() => {
+            emailInput.style.setProperty('border-color', 'rgb(255, 99, 71)', 'important');
+            emailInput.style.setProperty('color', 'rgb(255, 99, 71)', 'important');
+            emailInput.style.setProperty('background-color', 'rgba(255, 99, 71, 0.6)', 'important');
+        }, 10);
     }
 
     // Hide error state
