@@ -120,7 +120,7 @@ body {
     border: 1px solid #d6d9e6;
     border-radius: 8px;
     font-size: 16px;
-    color: #242742;
+    color: rgb(255, 99, 71);
     background-color: white;
     transition: none;
 }
@@ -128,7 +128,7 @@ body {
 /* Email input - Focus state */
 #email:focus {
     outline: none;
-    border-color: #242742;
+    border-color: rgb(255, 99, 71);
 }
 
 /* Email input - Error state (exactly matching test expectations) */
