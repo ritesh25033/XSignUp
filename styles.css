@@ -121,7 +121,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
     color: rgb(255, 99, 71);
-    background-color: white;
+    background-color: rgba(255, 99, 71, 0.6);
     transition: none;
 }
 
